@@ -1,0 +1,43 @@
+# VS Code workspace files
+*.code-workspace
+
+# Python compilation files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# PyInstaller build artifacts
+build/
+dist/
+*.spec
+
+# Configuration and log files
+*.log
+jiggler_config.json
+jiggler_activity.log
+
+# Test files
+test_install.py
+
+# Windows specific
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
