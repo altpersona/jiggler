@@ -83,22 +83,38 @@ class SystemTrayJiggler:
         else:
             # Red circle for stopped
             draw.ellipse([8, 8, 56, 56], fill=(220, 20, 60), outline=(139, 0, 0))
-        
-        # Add a small mouse cursor symbol
+          # Add a small mouse cursor symbol
         draw.polygon([(32, 20), (32, 44), (38, 38), (44, 44), (38, 32)], fill=(255, 255, 255))
         
         return image
     
     def jiggle_mouse(self):
-        """Perform a subtle mouse movement"""
+        """Perform enhanced system activity simulation for Windows 11"""
         try:
             # Get current mouse position
             current_x, current_y = pyautogui.position()
             
-            # Move mouse slightly and return to original position
-            pyautogui.moveRel(self.movement_distance, 0, duration=0.1)
-            time.sleep(0.05)
-            pyautogui.moveRel(-self.movement_distance, 0, duration=0.1)
+            # Enhanced movement pattern for Windows 11 compatibility
+            # Use multiple small movements in different directions
+            movements = [
+                (self.movement_distance, 0),
+                (0, self.movement_distance), 
+                (-self.movement_distance, 0),
+                (0, -self.movement_distance)
+            ]
+            
+            for dx, dy in movements:
+                pyautogui.moveRel(dx, dy, duration=0.05)
+                time.sleep(0.02)
+            
+            # Also simulate a very brief key press (Shift key) to ensure system activity
+            # This is more reliable for preventing sleep on Windows 11
+            try:
+                pyautogui.keyDown('shift')
+                time.sleep(0.01)
+                pyautogui.keyUp('shift')
+            except:
+                pass  # Fallback to just mouse movement if key simulation fails
             
             self.total_jiggles += 1
             return True

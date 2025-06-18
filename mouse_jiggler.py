@@ -26,20 +26,36 @@ class MouseJiggler:
         self.interval = 60  # Default: move every 60 seconds
         self.movement_distance = 1  # Very small movement
         
-        # Disable pyautogui failsafe for controlled operation
-        pyautogui.FAILSAFE = True
+        # Disable pyautogui failsafe for controlled operation        pyautogui.FAILSAFE = True
         pyautogui.PAUSE = 0.1
         
     def jiggle_mouse(self):
-        """Perform a subtle mouse movement"""
+        """Perform enhanced mouse movement for Windows 11 compatibility"""
         try:
             # Get current mouse position
             current_x, current_y = pyautogui.position()
             
-            # Move mouse slightly and return to original position
-            pyautogui.moveRel(self.movement_distance, 0, duration=0.1)
-            time.sleep(0.05)
-            pyautogui.moveRel(-self.movement_distance, 0, duration=0.1)
+            # Enhanced movement pattern for better Windows 11 compatibility
+            # Use multiple small movements in different directions
+            movements = [
+                (self.movement_distance, 0),
+                (0, self.movement_distance), 
+                (-self.movement_distance, 0),
+                (0, -self.movement_distance)
+            ]
+            
+            for dx, dy in movements:
+                pyautogui.moveRel(dx, dy, duration=0.05)
+                time.sleep(0.02)
+            
+            # Also simulate a very brief key press to ensure system activity
+            # This is more reliable for preventing sleep on Windows 11
+            try:
+                pyautogui.keyDown('shift')
+                time.sleep(0.01)
+                pyautogui.keyUp('shift')
+            except:
+                pass  # Fallback to just mouse movement if key simulation fails
             
             return True
         except Exception as e:
