@@ -1,6 +1,9 @@
 # VS Code workspace files
 *.code-workspace
 
+# Embedded repositories
+jiggler/
+
 # Python compilation files
 __pycache__/
 *.py[cod]
