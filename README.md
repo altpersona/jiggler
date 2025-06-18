@@ -2,14 +2,29 @@
 
 A lightweight, security-conscious mouse jiggler for Windows that prevents system sleep and screensaver activation without triggering security warnings.
 
+## 🎉 Version 1.1 - System Tray Edition
+
+**NEW:** System tray integration! Run headless with convenient right-click menu controls.
+
 ## Features
 
+### Core Features
 - **Security Friendly**: Uses minimal, transparent mouse movements
+- **System Tray Integration**: Runs in background with visual status indicators
+- **Right-Click Menu**: Easy access to start/stop and configuration
 - **Configurable**: Adjustable intervals and movement distance
-- **Interactive**: Command-line interface with real-time control
 - **Safe**: Uses PyAutoGUI library (well-established and trusted)
-- **Graceful**: Clean shutdown with Ctrl+C support
+- **Standalone Executable**: No Python installation required
 - **Minimal Impact**: Very small movements (1-2 pixels by default)
+
+### Version Comparison
+| Feature | v1.0 Console | v1.1 System Tray |
+|---------|--------------|-------------------|
+| Interface | Command line | System tray |
+| Background | Manual | Automatic |
+| Controls | Text commands | Right-click menu |
+| Status | Console output | Visual icons + notifications |
+| Deployment | Multiple files | Single executable |
 
 ## Why This Approach is Security Friendly
 
