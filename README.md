@@ -9,6 +9,7 @@ A lightweight, security-conscious mouse jiggler for Windows that prevents system
 ## Features
 
 ### Core Features
+
 - **Security Friendly**: Uses minimal, transparent mouse movements
 - **System Tray Integration**: Runs in background with visual status indicators
 - **Right-Click Menu**: Easy access to start/stop and configuration
@@ -18,13 +19,14 @@ A lightweight, security-conscious mouse jiggler for Windows that prevents system
 - **Minimal Impact**: Very small movements (1-2 pixels by default)
 
 ### Version Comparison
-| Feature | v1.0 Console | v1.1 System Tray |
-|---------|--------------|-------------------|
-| Interface | Command line | System tray |
-| Background | Manual | Automatic |
-| Controls | Text commands | Right-click menu |
-| Status | Console output | Visual icons + notifications |
-| Deployment | Multiple files | Single executable |
+
+| Feature    | v1.0 Console   | v1.1 System Tray             |
+| ---------- | -------------- | ---------------------------- |
+| Interface  | Command line   | System tray                  |
+| Background | Manual         | Automatic                    |
+| Controls   | Text commands  | Right-click menu             |
+| Status     | Console output | Visual icons + notifications |
+| Deployment | Multiple files | Single executable            |
 
 ## Why This Approach is Security Friendly
 
