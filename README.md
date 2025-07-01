@@ -2,31 +2,41 @@
 
 A lightweight, security-conscious mouse jiggler for Windows that prevents system sleep and screensaver activation without triggering security warnings.
 
-## 🎉 Version 1.1 - System Tray Edition
+## 🚀 Version 2.0 - Standalone Edition
 
-**NEW:** System tray integration! Run headless with convenient right-click menu controls.
+**NEW:** No Python or Java required! Three standalone implementations using only built-in Windows components:
+
+- **Batch Script** (`.bat`) - Just double-click to run
+- **PowerShell Script** (`.ps1`) - Advanced configuration options  
+- **VBScript** (`.vbs`) - Minimal resource usage
+
+**Perfect for corporate environments** - no installations needed!
 
 ## Features
 
-### Core Features
+### 🎯 Standalone Versions (v2.0) - **RECOMMENDED**
 
-- **Security Friendly**: Uses minimal, transparent mouse movements
+- **Zero Dependencies**: No Python, Java, or any runtime required
+- **Instant Use**: Just download and double-click
+- **Corporate Friendly**: Uses only built-in Windows components
+- **Three Options**: Batch, PowerShell, and VBScript versions
+- **Full Documentation**: Complete usage guides included
+
+### 🐍 Python Versions (Legacy)
+
 - **System Tray Integration**: Runs in background with visual status indicators
 - **Right-Click Menu**: Easy access to start/stop and configuration
 - **Configurable**: Adjustable intervals and movement distance
 - **Safe**: Uses PyAutoGUI library (well-established and trusted)
-- **Standalone Executable**: No Python installation required
-- **Minimal Impact**: Very small movements (1-2 pixels by default)
+- **Standalone Executable**: No Python installation required for compiled versions
 
 ### Version Comparison
 
-| Feature    | v1.0 Console   | v1.1 System Tray             |
-| ---------- | -------------- | ---------------------------- |
-| Interface  | Command line   | System tray                  |
-| Background | Manual         | Automatic                    |
-| Controls   | Text commands  | Right-click menu             |
-| Status     | Console output | Visual icons + notifications |
-| Deployment | Multiple files | Single executable            |
+| Version | Dependencies | Best For | Ease of Use |
+|---------|-------------|----------|-------------|
+| **v2.0 Standalone** | None | Corporate/Restricted environments | ⭐⭐⭐⭐⭐ |
+| v1.1 System Tray | Python | Advanced users with Python | ⭐⭐⭐ |
+| v1.0 Console | Python | Command-line users | ⭐⭐ |
 
 ## Why This Approach is Security Friendly
 
@@ -36,25 +46,86 @@ A lightweight, security-conscious mouse jiggler for Windows that prevents system
 4. **No Hidden Behavior**: All actions are logged to console
 5. **Standard Library**: Uses well-known, legitimate automation library
 
-## Installation
+## Quick Start
+
+### 🚀 Standalone Versions (Recommended)
+
+**No installation required!** Choose your preferred version:
+
+1. **Batch Script** (Easiest)
+   ```batch
+   # Just double-click:
+   standalone_mouse_jiggler.bat
+   ```
+
+2. **PowerShell Script** (Most Features)
+   ```powershell
+   # Right-click → "Run with PowerShell" or:
+   .\standalone_mouse_jiggler.ps1
+   
+   # With custom settings:
+   .\standalone_mouse_jiggler.ps1 -Interval 30 -Distance 2
+   ```
+
+3. **VBScript** (Lightest)
+   ```batch
+   # Double-click or:
+   cscript standalone_mouse_jiggler.vbs
+   ```
+
+### 🐍 Python Versions (Legacy)
 
 1. Make sure Python 3.6+ is installed
 2. Run the batch file or install manually:
 
-### Option 1: Use the batch file
+### Option 1: Use the batch file (Python)
 
 ```batch
 run_jiggler.bat
 ```
 
-### Option 2: Manual installation
+### Option 2: Manual installation (Python)
 
 ```bash
 pip install -r requirements.txt
 python mouse_jiggler.py
 ```
 
-## Usage
+## Standalone Usage
+
+### Batch Script (`standalone_mouse_jiggler.bat`)
+
+1. Double-click the file
+2. Mouse will jiggle every 60 seconds
+3. Press Ctrl+C to stop
+
+### PowerShell Script (`standalone_mouse_jiggler.ps1`)
+
+```powershell
+# Basic usage
+.\standalone_mouse_jiggler.ps1
+
+# Custom interval (30 seconds)
+.\standalone_mouse_jiggler.ps1 -Interval 30
+
+# Silent mode
+.\standalone_mouse_jiggler.ps1 -Silent
+
+# Show help
+.\standalone_mouse_jiggler.ps1 -Help
+```
+
+### VBScript (`standalone_mouse_jiggler.vbs`)
+
+```batch
+# Console output
+cscript standalone_mouse_jiggler.vbs
+
+# Background mode
+wscript standalone_mouse_jiggler.vbs
+```
+
+## Python Usage (Legacy)
 
 ### Quick Start
 
@@ -174,10 +245,30 @@ python mouse_jiggler.py
 
 ### Known Limitations
 
+#### Standalone Versions
+- Fixed intervals (60 seconds for batch/VBS, configurable for PowerShell)
+- Basic error handling
+- Windows only (by design)
+
+#### Python Versions  
 - Requires Python to be installed
 - Doesn't work if Python process is suspended
 - Mouse movements may be visible (by design for transparency)
 - Failsafe: Move mouse to top-left corner to stop PyAutoGUI
+
+## Files Overview
+
+### Standalone Files (v2.0) ⭐
+- `standalone_mouse_jiggler.bat` - Batch script version
+- `standalone_mouse_jiggler.ps1` - PowerShell version  
+- `standalone_mouse_jiggler.vbs` - VBScript version
+- `STANDALONE_OPTIONS.md` - Complete documentation
+
+### Python Files (Legacy)
+- `mouse_jiggler.py` - Console version
+- `tray_jiggler.py` - System tray version
+- `advanced_jiggler.py` - Feature-rich version
+- Various build scripts and executables
 
 ## License
 
