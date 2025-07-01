@@ -7,7 +7,7 @@ A lightweight, security-conscious mouse jiggler for Windows that prevents system
 **NEW:** No Python or Java required! Three standalone implementations using only built-in Windows components:
 
 - **Batch Script** (`.bat`) - Just double-click to run
-- **PowerShell Script** (`.ps1`) - Advanced configuration options  
+- **PowerShell Script** (`.ps1`) - Advanced configuration options
 - **VBScript** (`.vbs`) - Minimal resource usage
 
 **Perfect for corporate environments** - no installations needed!
@@ -32,11 +32,11 @@ A lightweight, security-conscious mouse jiggler for Windows that prevents system
 
 ### Version Comparison
 
-| Version | Dependencies | Best For | Ease of Use |
-|---------|-------------|----------|-------------|
-| **v2.0 Standalone** | None | Corporate/Restricted environments | ⭐⭐⭐⭐⭐ |
-| v1.1 System Tray | Python | Advanced users with Python | ⭐⭐⭐ |
-| v1.0 Console | Python | Command-line users | ⭐⭐ |
+| Version             | Dependencies | Best For                          | Ease of Use |
+| ------------------- | ------------ | --------------------------------- | ----------- |
+| **v2.0 Standalone** | None         | Corporate/Restricted environments | ⭐⭐⭐⭐⭐  |
+| v1.1 System Tray    | Python       | Advanced users with Python        | ⭐⭐⭐      |
+| v1.0 Console        | Python       | Command-line users                | ⭐⭐        |
 
 ## Why This Approach is Security Friendly
 
@@ -53,16 +53,18 @@ A lightweight, security-conscious mouse jiggler for Windows that prevents system
 **No installation required!** Choose your preferred version:
 
 1. **Batch Script** (Easiest)
+
    ```batch
    # Just double-click:
    standalone_mouse_jiggler.bat
    ```
 
 2. **PowerShell Script** (Most Features)
+
    ```powershell
    # Right-click → "Run with PowerShell" or:
    .\standalone_mouse_jiggler.ps1
-   
+
    # With custom settings:
    .\standalone_mouse_jiggler.ps1 -Interval 30 -Distance 2
    ```
@@ -246,11 +248,13 @@ wscript standalone_mouse_jiggler.vbs
 ### Known Limitations
 
 #### Standalone Versions
+
 - Fixed intervals (60 seconds for batch/VBS, configurable for PowerShell)
 - Basic error handling
 - Windows only (by design)
 
-#### Python Versions  
+#### Python Versions
+
 - Requires Python to be installed
 - Doesn't work if Python process is suspended
 - Mouse movements may be visible (by design for transparency)
@@ -259,12 +263,14 @@ wscript standalone_mouse_jiggler.vbs
 ## Files Overview
 
 ### Standalone Files (v2.0) ⭐
+
 - `standalone_mouse_jiggler.bat` - Batch script version
-- `standalone_mouse_jiggler.ps1` - PowerShell version  
+- `standalone_mouse_jiggler.ps1` - PowerShell version
 - `standalone_mouse_jiggler.vbs` - VBScript version
 - `STANDALONE_OPTIONS.md` - Complete documentation
 
 ### Python Files (Legacy)
+
 - `mouse_jiggler.py` - Console version
 - `tray_jiggler.py` - System tray version
 - `advanced_jiggler.py` - Feature-rich version
